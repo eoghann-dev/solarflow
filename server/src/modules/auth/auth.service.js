@@ -28,7 +28,7 @@ export async function verifyPassword(plainPassword, passwordHash) {
     return isMatch;
 }
 
-export async function changePassword(userId, currentPassword, newPassword) {
+export async function changeUserPassword(userId, currentPassword, newPassword) {
     const validatedPassword = validatePassword(newPassword);
 
     if (currentPassword === validatedPassword) {
